@@ -1,6 +1,5 @@
 import { defineAstroPaperConfig } from "./src/types/config";
 
-import { defineAstroPaperConfig } from "./src/types/config";
 export default defineAstroPaperConfig({
   site: {
     url: "https://peacefulwolverine.com/",
