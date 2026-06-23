@@ -24,8 +24,7 @@ export default defineAstroPaperConfig({
     showBackButton: true,
     editPost: {
       enabled: false,
-      url: "https://github.com/Sphinx2780/peacefulwolverine/edit/main/",
-    },
+      },
     search: "pagefind",
   },
   socials: [
