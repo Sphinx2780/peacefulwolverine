@@ -29,11 +29,7 @@ export default defineAstroPaperConfig({
     search: "pagefind",
   },
   socials: [
-    { name: "mail", url: "mailto:you@peacefulwolverine.com" },
+    { name: "mail", url: "mailto:gordon@peacefulwolverine.com" },
   ],
-  shareLinks: [
-    { name: "x",        url: "https://x.com/intent/post?url=" },
-    { name: "facebook", url: "https://www.facebook.com/sharer.php?u=" },
-    { name: "mail",     url: "mailto:?subject=See%20this%20post&body=" },
-  ],
+  shareLinks: [],
 });
