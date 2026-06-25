@@ -1,37 +1,14 @@
 ---
 title: "About"
-description: "A bit about me and this blog."
+description: "The personal writing page of Gordon Edgar/peacefulwolverine."
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+I'm Gordon Edgar, and this is where I write for myself.
 
-![Astro Paper](@/assets/images/astropaper-og.jpg)
+I am a journalist, a blogger, an essayist, a podcaster, and PeacefulWolverine — which is either a gamertag escaped into the wild or an accurate description of my temperament, depending on the day. The name stuck, and so did the animal: Wolverines are small, solitary, stubborn northern creatures that punch well above their weight. I'll let you decide how much of that is autobiography.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+This is home to the writing that doesn't belong anywhere else — daily thoughts, spontaneous short stories, reflections, the occasional poem, a little news from the Saskatchewan prairie, and the ongoing misadventures of Wolverine and Badger. That last one is me and my teenage stepdaughter, known here as MeditativeBadger, getting ourselves killed in co-op horror games and living to write about it. Fact, fiction, history, imagination, and as much *pathos* as I can get away with.
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+If you'd prefer a more serious version of me, I also write and podcast **Polite Disputes** — calm, disciplined, evidence-first examinations of contested topics — under the name Allen Schyf, at [allenschyf.com](https://allenschyf.com). Same person, different register. Gordon Edgar has opinions; Allen Schyf mostly just cares that everyone is getting their facts straight, to the end of having polite, productive conversations.
 
-## Features
-
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
-
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
-
-and so much more.
-
-## Show your support
-
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
-
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
-
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
-
-Kyay zuu! 🙏🏼
+Stick around. There's no schedule and no theme, which is rather the point. Just daily posts.
