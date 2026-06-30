@@ -1,7 +1,7 @@
 ---
 title: "On being Allen Schyf"
 description: "Why I needed a name that wasn't mine, and what Allen Schyf is actually for: cases, not causes."
-pubDatetime: 2026-06-27T22:00:00-06:00
+pubDatetime: 2026-06-29T22:00:00-06:00
 tags: ["reflections", "allen-schyf"]
 featured: false
 draft: false
