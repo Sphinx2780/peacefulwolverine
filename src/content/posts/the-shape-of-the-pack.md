@@ -75,7 +75,7 @@ There is status that is taken, extracted through the credible threat of cost. An
 
 I will mention here that while I was at Dal, I made the mistake of mentioning Cesar Millan's name at the dog lab, which is still run by Simon Gadbois (very French), who also teaches Animal Behavior. 
 
-You don't want to mention dominance theory, and Cesar Millan, around Professor Gadbois. It is his strong opinion that such theories have produced nothing but coercive, borderline abusive relationships.
+You don't want to mention dominance theory, and Cesar Millan, around Professor Gadbois. It is _his_ strong opinion that such theories have produced nothing but coercive, borderline abusive relationships... Or at least that's the impression I got.
 
 ---
 
