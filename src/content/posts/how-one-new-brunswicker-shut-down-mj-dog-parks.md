@@ -1,5 +1,5 @@
 ---
-title: How One New Brunswicker Shut Down MJ's Dog Parks
+title: How one New Brunswicker shut down MJ's dog parks
 description: Moose Jaw's dog parks have stayed shut for a month on one traveller's unconfirmed poisoning claim — after the water tested clean — while the locals who questioned it got doxxed.
 pubDatetime: 2026-07-21T09:00:00-06:00
 tags:
