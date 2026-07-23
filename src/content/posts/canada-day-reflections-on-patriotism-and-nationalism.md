@@ -1,5 +1,5 @@
 ---
-title: "Canada Day Reflections on Patriotism and Nationalism"
+title: "Canada Day reflections on patriotism and nationalism"
 description: "Canada's flag is younger than many of its houses — a reflection on what patriotism and nationalism really are, which kind of national pride is worth having, and whether we should believe in our countries at all."
 pubDatetime: 2026-07-01T09:00:00-06:00
 tags: ["reflections", "canada-day"]
