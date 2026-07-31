@@ -1,6 +1,6 @@
 ---
-title: "In Defence of Nihilism"
-description: "We went looking for a note left behind by the universe and found extraordinary physics with no signature needed — and that turns out to be better news than it sounds."
+title: "In defence of nihilism"
+description: "We went looking for a note left behind by the universe and found extraordinary physics with no signature needed."
 pubDatetime: 2026-07-31T09:00:00-06:00
 tags:
   - reflections
