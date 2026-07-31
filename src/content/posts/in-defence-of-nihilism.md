@@ -9,7 +9,7 @@ featured: false
 draft: false
 ---
 
-Somewhere in the last few centuries we did a very thorough search.
+Over the last few centuries, we've done a very thorough search. Since the Enlightenment, at least.
 
 Not one search, obviously. Millions of them, by people who mostly weren't looking for the same thing and often actively disliked each other's conclusions ("actively disliked" ranges from marital stress to the Spanish Inquisition). We took apart the sky and found more of the same stuff we're made of, burning. We took apart the body and found chemistry — and oodles of symbiotes, for that matter. We took apart the chemistry and found smaller chemistry, and under that, particles behaving in ways that are deeply strange but not, it turns out, in any way *intentional*.
 
