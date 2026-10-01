@@ -54,17 +54,30 @@ const pageDesc =
 </Layout>
 
 <style>
+  /* Plain CSS against the theme tokens in src/styles/theme.css.
+     No @apply here: Tailwind v4 cannot resolve utilities inside a scoped
+     Astro style block without a @reference directive. */
   .seg-btn {
-    @apply text-muted-foreground px-3 py-2 text-sm;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    background: transparent;
+    border: 0;
   }
   .seg-btn[aria-pressed="true"] {
-    @apply bg-accent text-accent-foreground;
+    background: var(--accent);
+    color: var(--accent-foreground);
   }
   #hist li {
-    @apply border-border flex gap-3 border-b py-3;
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
   }
   #hist li span {
-    @apply text-muted-foreground shrink-0 text-sm;
+    flex-shrink: 0;
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
   }
 </style>
 
