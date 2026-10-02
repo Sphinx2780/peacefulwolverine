@@ -1,0 +1,210 @@
+---
+// src/pages/derision-engine.astro
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import config from "@/config";
+
+const pageTitle = "Peaceful Wolverine's Derision Engine";
+const pageDesc = "Fresh, ridiculous, harmless. Any game. A generator of family-friendly abuse for use in any game.";
+---
+
+<Layout title={`${pageTitle} | ${config.site.title}`} description={pageDesc}>
+  <Header />
+  <Breadcrumb />
+
+  <Main pageTitle={pageTitle} pageDesc={pageDesc}>
+
+<div class="controls mb-4 flex flex-wrap gap-2">
+  <div class="seg border-border bg-muted flex overflow-hidden rounded-full border" id="flavour" role="group" aria-label="Flavour">
+    <button data-v="mixed" aria-pressed="true">Mixed</button>
+    <button data-v="classic" aria-pressed="false">Classic</button>
+    <button data-v="modern" aria-pressed="false">Modern</button>
+  </div>
+  <div class="seg border-border bg-muted flex overflow-hidden rounded-full border" id="length" role="group" aria-label="Length">
+    <button data-v="short" aria-pressed="false">Short</button>
+    <button data-v="medium" aria-pressed="false">Medium</button>
+    <button data-v="long" aria-pressed="true">Long</button>
+  </div>
+  <div class="seg border-border bg-muted flex overflow-hidden rounded-full border" id="deck" role="group" aria-label="Deck">
+    <button data-v="engine" aria-pressed="true">Engine</button>
+    <button data-v="killed" aria-pressed="false">They got you</button>
+    <button data-v="kill" aria-pressed="false">You got them</button>
+  </div>
+  <div class="seg border-border bg-muted flex overflow-hidden rounded-full border" id="pack" role="group" aria-label="Target">
+    <button data-v="solo" aria-pressed="true">Solo</button>
+    <button data-v="pack" aria-pressed="false">Group</button>
+  </div>
+  <div class="seg border-border bg-muted flex overflow-hidden rounded-full border" id="count" role="group" aria-label="Lines">
+    <button data-v="1" aria-pressed="false">1</button>
+    <button data-v="3" aria-pressed="true">3</button>
+    <button data-v="5" aria-pressed="false">5</button>
+  </div>
+</div>
+
+    <div id="stage" aria-live="polite" class="mb-4 flex flex-col gap-3"></div>
+
+    <div class="flex flex-wrap items-center gap-3">
+      <button id="go" class="bg-accent text-accent-foreground rounded-lg px-6 py-3 font-semibold">New lines</button>
+      <button id="refocus" class="ghost border-border text-muted-foreground rounded-lg border px-4 py-3 text-sm" aria-pressed="true">Refresh on alt-tab</button>
+    </div>
+    <p class="text-muted-foreground mt-3 text-sm">Spacebar deals a fresh set. Alt-tab back and it deals automatically while "Refresh on alt-tab" is on.</p>
+  </Main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* Plain CSS against theme tokens; no @apply in a scoped block under Tailwind v4. */
+  .seg button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+    color: var(--muted-foreground);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+  .seg button[aria-pressed="true"] {
+    background: var(--accent);
+    color: var(--accent-foreground);
+  }
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 0.6rem;
+    background: var(--muted);
+  }
+  .card p {
+    margin: 0;
+    flex: 1;
+    font-size: 1.45rem;
+    line-height: 1.3;
+  }
+  .mini {
+    flex: 0 0 auto;
+    font-size: 0.75rem;
+    padding: 0.45rem 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 0.4rem;
+    color: var(--muted-foreground);
+    background: transparent;
+    cursor: pointer;
+  }
+  .ghost[aria-pressed="true"] {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  @media (max-width: 560px) {
+    .card p { font-size: 1.2rem; }
+  }
+</style>
+
+<script>
+  const POOL = {
+    classic: { B:["damp", "mildewed", "curdled", "thrice-boiled", "turnip-scented", "moth-eaten", "lukewarm", "pond-reared", "draughty", "faintly sticky", "bog-adjacent", "unrinsed", "second-hand", "under-salted", "rain-spoiled", "twice-chewed", "cupboard-smelling", "puddle-born", "half-thawed", "gravy-adjacent", "silt-flavoured", "overboiled", "unaired", "sour-milked", "kettle-warm", "church-cold", "undercooked", "pantry-grey", "slug-polished", "faintly fermented"], C:["gormless", "boggle-eyed", "weak-chinned", "custard-hearted", "knock-kneed", "dithering", "wobbling", "apologetic", "under-baked", "perpetually startled", "loose-jawed", "flap-footed", "chronically agreeable", "unaccountably confident", "visibly negotiable", "officious", "slack-mouthed", "soft-spined", "nervously cheerful", "half-committed", "drowsy", "affronted", "blustering", "easily herded", "sideways-walking", "publicly damp", "loosely assembled", "visibly rehearsing", "anxiously upright", "briskly wrong"], D:[["bucket of pond water", "buckets of pond water"], ["sack of wet turnips", "sacks of wet turnips"], ["apology for a lizard", "apologies for lizards"], ["footnote", "footnotes"], ["blancmange", "blancmanges"], ["bag of elbows", "bags of elbows"], ["hedge", "hedges"], ["wheelbarrow", "wheelbarrows"], ["disappointment with legs", "disappointments with legs"], ["draught excluder", "draught excluders"], ["wet hymn book", "wet hymn books"], ["committee of one", "committees of one"], ["trifle left out overnight", "trifles left out overnight"], ["clerical error with teeth", "clerical errors with teeth"], ["placeholder", "placeholders"], ["sock of regrets", "socks of regrets"], ["bowl of lukewarm consequences", "bowls of lukewarm consequences"], ["long sigh in a body", "long sighs in bodies"], ["gravy boat", "gravy boats"], ["decorative shrub", "decorative shrubs"], ["bag of damp receipts", "bags of damp receipts"], ["mistake with a pulse", "mistakes with a pulse"], ["provisional animal", "provisional animals"], ["understudy", "understudies"], ["wet sermon", "wet sermons"], ["forgotten errand", "forgotten errands"], ["rounding error", "rounding errors"], ["hat stand with ambitions", "hat stands with ambitions"], ["pamphlet", "pamphlets"], ["loosely attended funeral", "loosely attended funerals"]], E:["Your mother knits with soup.", "You were raised entirely by a fence.", "Your family crest is a shrug.", "I have seen more menace in a scone.", "You smell faintly of Tuesday.", "Your father was a wardrobe and he was ashamed of you.", "You were weaned on regret and lukewarm gravy.", "Somewhere, a bog is missing its contents.", "You have the bearing of a dropped trifle.", "I have been frightened by a gate.", "Nobody named you. You were assigned.", "You will be a cautionary paragraph.", "I shall think of you whenever something is almost finished.", "You were the compromise.", "I have met bolder weather.", "Your silhouette is an apology.", "Even your footprints look uncertain.", "You will be survived by nothing in particular.", "I have seen you flinch at scenery.", "You were described to me and the description was kind.", "Even the rain goes around you.", "You arrive like a draught and leave like a rumour.", "I shall not be asking your name.", "You were built from leftovers and optimism.", "Your silence was the best part.", "You have the depth of a puddle and half the ambition.", "I have been less alarmed by a hedge.", "You are a long sigh with a postcode.", "The furniture has more initiative.", "You peaked at the loading screen."] },
+    modern:  { B:["lightly used", "factory-second", "decaffeinated", "half-assembled", "unplugged", "out-of-warranty", "partially downloaded", "pre-owned", "biodegradable", "clearance-rack", "regifted", "low-resolution", "unsubscribed", "recently thawed", "store-brand", "beige", "minimally viable", "loosely scheduled", "non-refundable", "gently recalled", "off-brand", "buffering", "single-ply", "self-assembled", "budget-tier", "gluten-adjacent", "lightly haunted", "municipal", "complimentary", "batch-produced"],  C:["underwhelming", "mildly concussed", "visibly rebooting", "low-battery", "default-settings", "aggressively average", "ergonomically unfortunate", "quietly deprecated", "unpatched", "mid-yawn", "recently updated and worse for it", "approximately present", "voice-activated but not listening", "load-bearing in no direction", "accidentally invited", "structurally optional", "eagerly mediocre", "briefly famous in a car park", "confidently lost", "ambient", "on hold", "forever almost", "non-committal in all axes", "vaguely upholstered", "self-certified", "pre-emptively defeated", "inconveniently sincere", "sporadically alert", "chiefly decorative", "visibly in beta"],  D:[["mixed bag of vegetables", "mixed bags of vegetables"], ["barely inhabited aquarium", "barely inhabited aquariums"], ["lightly haunted spreadsheet", "lightly haunted spreadsheets"], ["decommissioned weather balloon", "decommissioned weather balloons"], ["sentient coupon", "sentient coupons"], ["unsupervised shopping trolley", "unsupervised shopping trolleys"], ["lukewarm fax", "lukewarm faxes"], ["waiting room with ambitions", "waiting rooms with ambitions"], ["parking ticket with a face", "parking tickets with faces"], ["municipal pigeon", "municipal pigeons"], ["warm handrail", "warm handrails"], ["abandoned sandwich", "abandoned sandwiches"], ["unplugged lamp", "unplugged lamps"], ["dial tone", "dial tones"], ["committee of socks", "committees of socks"], ["loading screen", "loading screens"], ["low-tier yoghurt", "low-tier yoghurts"], ["crisp packet in a hedge", "crisp packets in a hedge"], ["voicemail nobody plays", "voicemails nobody plays"], ["expired loyalty card", "expired loyalty cards"], ["ornamental bollard", "ornamental bollards"], ["beige event", "beige events"], ["weather warning for mild", "weather warnings for mild"], ["airport carpet", "airport carpets"], ["tutorial nobody finished", "tutorials nobody finished"], ["fridge magnet with opinions", "fridge magnets with opinions"], ["conference lanyard", "conference lanyards"], ["slightly open drawer", "slightly open drawers"], ["packet of silica gel", "packets of silica gel"], ["decaf espresso", "decaf espressos"], ["bus replacement service", "bus replacement services"], ["cold call", "cold calls"], ["terms and conditions", "terms and conditions"], ["lift that only goes down", "lifts that only go down"], ["chair that is also a bin", "chairs that are also bins"], ["wind-up torch at noon", "wind-up torches at noon"], ["roundabout with no exits", "roundabouts with no exits"], ["low-orbit disappointment", "low-orbit disappointments"], ["printer that is thinking about it", "printers that are thinking about it"], ["damp motivational poster", "damp motivational posters"]],  E:["Your loading screen has more personality.", "The tutorial is embarrassed for you.", "Even the NPCs have stopped waving.", "Your respawn point has filed a complaint.", "You are the reason there is a skip button.", "I have seen bolder behaviour from a toaster.", "Your minimap is the only thing that knows where you are.", "You lag in person.", "The patch notes list you under known issues.", "Your difficulty setting is a cry for help.", "You were speedrun by a hedge.", "The server keeps you around as a warning.", "Your build has been reported as a bug.", "You have the presence of an unread terms-of-service.", "Someone muted you and improved.", "You are what the autosave was afraid of.", "The matchmaking owes everyone an apology.", "You spawned, and the lobby sighed.", "Your ping has more ambition than you do.", "You are the loading bar that goes backwards.", "You will be remembered as a rounding error.", "The scoreboard lists you as 'other'.", "Your respawn timer is a mercy to the rest of us.", "You fight like a settings menu.", "I have been ganked by better scenery.", "Even the bots have declined to add you.", "Your highlight reel is a still image.", "You are the hold music of this lobby.", "The achievement for finding you is called 'Why'.", "You have the K/D ratio of a traffic cone."] }
+  };
+  const KILLED=["Congratulations. You have peaked.", "Enjoy it. Nobody else will hear about it.", "That was the highlight of your week and we both know it.", "I hope it was worth the walk.", "I shall remember this. Briefly.", "Ah. So that is what you are for.", "A triumph, by your standards, which I have now seen.", "Add it to the pile. The pile is small.", "I was going to log off anyway.", "You will tell this story. People will leave.", "That is the most decisive thing you will do today.", "Enjoy the clip. It will not age well.", "You beat a man who was reading the map.", "I respawn. You remain you.", "That took four minutes and a great deal of planning.", "Somewhere a tutorial is proud of you.", "You have defeated an afterthought. Well done.", "I was alt-tabbed, but take the point.", "You may put it on your profile, if you are brave.", "Noted. Not remembered. Noted."];
+  const KILL=["No, no. Stay down. You are better at it.", "That was less a fight than a formality.", "I am told there is a beginner's server.", "Do not take it personally. Take it geographically. Leave.", "You came a long way to lie down.", "I would say well fought, but the record is public.", "Rest. You have earned the ground.", "You have been filed.", "That is the quietest you have been all evening.", "I shall leave the body as a notice.", "You arrived with ambition and are leaving with gravity.", "A short career, handsomely concluded.", "I did warn you. At length. In full sentences.", "You have been reclassified.", "Consider this peer review.", "Respawn somewhere I am not.", "You were the tutorial. I have finished it.", "That was the free trial.", "Your team will not be asking what happened.", "I have added you to the environment."];
+  function init() {
+    if (!document.getElementById("stage")) return;
+
+    let flavour = "mixed";
+    let length = "long";
+    let deck = "engine";
+    let pack = false;
+    let count = 3;
+    type Col = "B" | "C" | "D" | "E";
+    const recent: Record<Col, number[]> = { B: [], C: [], D: [], E: [] };
+    function pool(col: Col): any[] {
+      if (flavour === "mixed") return POOL.classic[col].concat(POOL.modern[col] as any[]);
+      return (POOL as any)[flavour][col];
+    }
+    function draw(col: Col): any {
+      const arr = pool(col);
+      const seen = recent[col];
+      let i = 0;
+      let guard = 0;
+      do {
+        i = Math.floor(Math.random() * arr.length);
+        guard++;
+      } while (seen.includes(i) && guard < 20);
+      seen.push(i);
+      if (seen.length > Math.min(8, Math.floor(arr.length / 3))) seen.shift();
+      return arr[i];
+    }
+    function cap(s: string): string { return s.charAt(0).toUpperCase() + s.slice(1); }
+    function line(): string {
+      if (deck === "killed") return KILLED[Math.floor(Math.random() * KILLED.length)];
+      if (deck === "kill") return KILL[Math.floor(Math.random() * KILL.length)];
+      const d = draw("D") as string[];
+      const noun = pack ? d[1] : d[0];
+      const b = draw("B") as string;
+      if (length === "short") return cap(`${b} ${noun}.`);
+      const c = draw("C") as string;
+      const core = `${b}, ${c} ${noun}.`;
+      if (length === "medium") return cap(core);
+      const art = /^[aeiou]/i.test(b) ? "an" : "a";
+      const subj = pack ? "The lot of you are" : `You are ${art}`;
+      const e = draw("E") as string;
+      return `${subj} ${core} ${e}`;
+    }
+    function deal(): string[] {
+      const out: string[] = [];
+      for (let i = 0; i < count; i++) out.push(line());
+      return out;
+    }
+
+
+    const stage = document.getElementById("stage") as HTMLElement;
+    function render(lines: string[]) {
+      stage.innerHTML = lines
+        .map(t => `<div class="card"><p>${t.replace(/&/g, "&amp;").replace(/</g, "&lt;")}</p><button class="mini" data-copy>Copy</button></div>`)
+        .join("");
+    }
+    function go() { render(deal()); }
+    stage.addEventListener("click", async (ev: Event) => {
+      const target = ev.target as HTMLElement | null;
+      const b = target?.closest("[data-copy]") as HTMLButtonElement | null;
+      if (!b) return;
+      const t = b.parentElement?.querySelector("p")?.textContent ?? "";
+      try { await navigator.clipboard.writeText(t); b.textContent = "Copied"; }
+      catch { b.textContent = "Select"; }
+      setTimeout(() => { b.textContent = "Copy"; }, 1100);
+    });
+    function wire(id: string, fn: (v: string) => void) {
+      const group = document.getElementById(id);
+      group?.addEventListener("click", (ev: Event) => {
+        const target = ev.target as HTMLElement | null;
+        const b = target?.closest("button") as HTMLButtonElement | null;
+        if (!b) return;
+        group.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
+        fn(b.dataset.v ?? "");
+        go();
+      });
+    }
+    wire("flavour", v => { flavour = v; });
+    wire("length", v => { length = v; });
+    wire("deck", v => { deck = v; });
+    wire("pack", v => { pack = v === "pack"; });
+    wire("count", v => { count = Number(v) || 3; });
+    document.getElementById("go")?.addEventListener("click", go);
+    document.addEventListener("keydown", (e: KeyboardEvent) => {
+      const tag = document.activeElement?.tagName ?? "";
+      if (e.code === "Space" && !/^(INPUT|TEXTAREA|BUTTON)$/.test(tag)) { e.preventDefault(); go(); }
+    });
+    const refocus = document.getElementById("refocus");
+    window.addEventListener("focus", () => { if (refocus?.getAttribute("aria-pressed") === "true") go(); });
+    refocus?.addEventListener("click", () => {
+      refocus.setAttribute("aria-pressed", refocus.getAttribute("aria-pressed") === "true" ? "false" : "true");
+    });
+    go();
+
+  }
+  document.addEventListener("astro:page-load", init);
+</script>
